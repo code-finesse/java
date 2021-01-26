@@ -1,0 +1,51 @@
+# Java Intro
+
+- What is Java?
+- Basic Literals
+- Overview of a Basic Program
+- Types and Variables
+- Sizes and Ranges
+    - good to know for interviews, but maybe not for regular use
+    - Numbers
+        - Java provides several types for integers and fractional numbers that are are often used in arithmetic expressions
+        - the sizes of types are always the same no matter the operating system or hardware
+        - he most commonly used integer types are `int` and `long`
+            - try to use `int` if it is enough for your purposes, otherwise use `long`
+
+        ```java
+        int one = 1;
+        long million = 1_000_000L;
+        ```
+
+        - f**loating-point types** represent numbers with fractional parts
+            - Java has two such types: `double` (64 bits) and `float` (32 bits)
+            - these types can store only a limited number of significant decimal digits (~6-7 for `float` and ~14-16 for `double`)
+            - usually, you will use the `double` type in practice
+
+        ```
+        double pi = 3.1415;
+        float e = 2.71828f;
+
+        ```
+
+        - when we declare and initialize a `float` variable, we should mark the assigned value with the special letter **f**
+        - it is often a good practice to mark a `long` value with **L** as well
+    - Characters
+        - Java has a type named `char` to represent letters (uppercase and lowercase), digits, and other symbols
+        - each character is just a single letter enclosed in single quotes
+        - this type has the same size as the `short` type (2 bytes = 16 bits).
+
+        ```java
+        char lowerCaseLetter = 'a';
+        char upperCaseLetter = 'Q';
+        char dollar = '$';
+        ```
+
+    - Booleans
+        - Java provides boolean types: true and false
+
+        A good mnemonic for remembering all the primitive types in order is: Be Careful! Bears Shouldn't Ingest Large Furry Dogs 
+        (Boolean, Char, Byte, Short, Int, Long, Float, Double).
+        This also helps to remember their sizes in bits, as it goes - 8, 16, 32, 64 for Byte, Short, Int and Long.
+
+- Type Casting
